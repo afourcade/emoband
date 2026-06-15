@@ -16,6 +16,7 @@ The main analysis script is [emotion_bandwidth_analysis.py](emotion_bandwidth_an
 - [emotion_bandwidth_analysis.py](emotion_bandwidth_analysis.py): Main preprocessing and inferential analysis pipeline.
 - [figures.py](figures.py): Script to generate conceptual/illustrative figures for MSSD, SD, ICC, and bandwidth.
 - [requirements.txt](requirements.txt): Python dependencies.
+- [power_sensitivity_analysis.py](power_sensitivity_analysis.py): Estimates minimum-detectable effect sizes (Cohen's f^2) for regression predictors given sample size and model size.
 
 ## Requirements
 
@@ -152,6 +153,21 @@ Run [figures.py](figures.py) to generate standalone conceptual figures for:
 - 3D state-space bandwidth visualization.
 
 Before running, update any hardcoded output paths in that script.
+
+## Power Sensitivity Analysis
+
+Run [power_sensitivity_analysis.py](power_sensitivity_analysis.py) to estimate the minimum-detectable Cohen's $f^2$ for a single predictor in multiple regression, for a fixed pooled sample size (`N`) and specified number of predictors (`k`). The script prints results to stdout for common power levels (0.80, 0.90, 0.95).
+
+Usage:
+
+```bash
+python power_sensitivity_analysis.py
+```
+
+Notes:
+
+- The script uses `scipy` for noncentral F computations; ensure it's installed via `requirements.txt`.
+- `N` is currently hardcoded in the script; edit the `N` variable to match your sample size if needed.
 
 ## Method Notes
 
