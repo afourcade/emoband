@@ -11,7 +11,7 @@ and questionnaire scores (loneliness, depression).
 and depression, controlling for mean affect level, age, and gender
 
 Author: Aleksandra Piejka, Antonin Fourcade (piejka[at]cbs.mpg.de, antonin.fourcade[at]maxplanckschools.de)
-Last version: 23.03.2026
+Last version: 15.06.2026
 """
 
 # %% IMPORTS AND SETTINGS
@@ -317,7 +317,7 @@ for sub_id in subject_ids:
             'bandwidth': emo_bw_mv,
             'mean_affect_level': mean_level,
             'icc': icc_val,
-            'granularity': granularity
+            'granularity': granularity, 
         }
         rows.append(row)
 
